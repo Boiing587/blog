@@ -9,6 +9,9 @@ app = Flask(__name__, static_url_path='/public')
 def form():
     return send_from_directory('./public', 'index.html')
 
+@app.route('/bruh')
+def bruh():
+    return send_from_directory('./public', 'bruh.html')
 
 @app.route('/<path:path>', methods=['GET'])
 def serve(path):
