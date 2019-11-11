@@ -1,0 +1,38 @@
+:root {
+  --navsize: 10rem;
+}
+
+* {
+  font-family: "Ubuntu Mono", Ubuntu, sans-serif;
+  color: white;
+}
+
+body {
+  background-color: #1C1C1C;
+}
+
+
+#toolbar {
+  background-color: #101010;
+  color: #d3d3d3;
+  height: 100%; /* Full-height: remove this if you want "auto" height */
+  width: var(--navsize); /* Set the width of the sidebar */
+  position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+  z-index: 1; /* Stay on top */
+  top: 0; /* Stay at the top */
+  left: 0;
+  background-color: #111; /* Black */
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 20px;
+  text-align: center;
+}
+
+#toolbar a {
+  display: block;
+  margin: 10px;
+}
+
+main {
+  margin-left: var(--navsize); /* Same as the width of the sidebar */
+  padding: 0px 10px;
+}
