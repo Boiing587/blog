@@ -2,10 +2,10 @@
 import os
 from flask import Flask, send_from_directory
 from dotenv import load_dotenv
+load_dotenv
 
 app = Flask(__name__, static_url_path='/public')
 port = os.getenv('PORT', 1337)
-load_dotenv()
 
 @app.route('/')
 def form():
