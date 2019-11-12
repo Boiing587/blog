@@ -1,11 +1,10 @@
 #!/usr/bin/env python3
-
 from flask import Flask, send_from_directory
 import os
 from dotenv import load_dotenv()
 
 app = Flask(__name__, static_url_path='/public')
-os.getenv('PORT', 1337)
+port = os.getenv('PORT', 1337)
 
 @app.route('/')
 def form():
@@ -20,5 +19,5 @@ def serve(path):
     return send_from_directory('public', path)
 
 
-app.run(host='0.0.0.0', port=1337)
+app.run(host='0.0.0.0', port=port)
 
