@@ -1,10 +1,11 @@
 #!/usr/bin/env python3
-from flask import Flask, send_from_directory
 import os
-from dotenv import load_dotenv()
+from flask import Flask, send_from_directory
+from dotenv import load_dotenv
 
 app = Flask(__name__, static_url_path='/public')
 port = os.getenv('PORT', 1337)
+load_dotenv()
 
 @app.route('/')
 def form():
