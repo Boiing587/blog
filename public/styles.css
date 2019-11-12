@@ -30,6 +30,11 @@ body {
 #toolbar a {
   display: block;
   margin: 10px;
+  text-decoration: none;
+}
+
+#toolbar a:hover {
+  color: #f1f1f1;
 }
 
 main {
