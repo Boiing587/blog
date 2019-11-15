@@ -11,6 +11,21 @@ body {
   background-color: #1C1C1C;
 }
 
+iframe {
+  margin: 0;
+  padding: 0;
+  border: thick;
+  height: 100%; /* Full-height: remove this if you want "auto" height */
+  width: var(--navsize); /* Set the width of the sidebar */
+  position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+  z-index: 1; /* Stay on top */
+  top: 0; /* Stay at the top */
+  left: 0;
+  background-color: #111; /* Black */
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 20px;
+  text-align: center;
+}
 
 #toolbar {
   background-color: #101010;
@@ -31,6 +46,12 @@ body {
   display: block;
   margin: 10px;
   text-decoration: none;
+}
+
+#toolbar a#sideHeader {
+  font-weight: bold;
+  padding-top: 20px;
+  font-size: 18px;
 }
 
 #toolbar a:hover {

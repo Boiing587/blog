@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel='stylesheet' href='styles.css'>
+    <link rel='shortcut icon' href='favicon.ico' />
+    <title>do-do do-do</title>
+  </head>
+  <body>
+    <script src='sidebar.js'></script>
+    <main>
+      <div id='posts'>
+      </div>
+    </main>
+
+    <script>
+      fetch('/posts.json')
+        .then(res => res.json())
+        .then((posts) => {
+          console.log(posts)
+          let i = 1;
+          posts.forEach(function (item) {
+            document.getElementById('posts').innerHTML += `Post ${i}:`;
+            document.getElementById('posts').innerHTML += `${item.title}<br/>`;
+            document.getElementById('posts').innerHTML += `by ${item.author}<br/>`;
+            document.getElementById('posts').innerHTML += `${item.content}`;
+            i++;
+          })
+        })
+        .catch(err => { throw err });
+    </script>
+  </body>
