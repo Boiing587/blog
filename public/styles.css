@@ -3,7 +3,6 @@
 }
 
 * {
-  font-family: "Ubuntu Mono", Ubuntu, sans-serif;
   color: white;
 }
 
@@ -40,6 +39,7 @@ iframe {
   overflow-x: hidden; /* Disable horizontal scroll */
   padding-top: 20px;
   text-align: center;
+
 }
 
 #toolbar a {
@@ -54,8 +54,8 @@ iframe {
   font-size: 18px;
 }
 
-#toolbar a:hover {
-  color: #f1f1f1;
+#toolbar a:hover:not(#sideHeader) {
+  color: #d1d1d1;
 }
 
 main {
