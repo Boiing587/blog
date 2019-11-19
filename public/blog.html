@@ -3,7 +3,7 @@
   <head>
     <link rel='stylesheet' href='styles.css'>
     <link rel='shortcut icon' href='favicon.ico' />
-    <title>do-do do-do</title>
+    <title>Blog</title>
   </head>
   <body>
     <script src='sidebar.js'></script>
@@ -11,7 +11,6 @@
       <div id='posts'>
       </div>
     </main>
-
     <script>
       fetch('/posts.json')
         .then(res => res.json())
@@ -19,10 +18,10 @@
           console.log(posts)
           let i = 1;
           posts.forEach(function (item) {
-            document.getElementById('posts').innerHTML += `Post ${i}:`;
-            document.getElementById('posts').innerHTML += `${item.title}<br/>`;
-            document.getElementById('posts').innerHTML += `by ${item.author}<br/>`;
-            document.getElementById('posts').innerHTML += `${item.content}`;
+            /* document.getElementById('posts').innerHTML += `Post ${i}:`; */
+            document.getElementById('posts').innerHTML += `<h1 id='blogTitle'>${item.title}</h1>`;
+            document.getElementById('posts').innerHTML += `<p id='author'>by ${item.author}</p>`;
+            document.getElementById('posts').innerHTML += `<p id='content'>${item.content}</p>`;
             i++;
           })
         })
