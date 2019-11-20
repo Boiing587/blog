@@ -1,20 +1,13 @@
-<!--<form method='POST'>
-    <span style='color: red;'>*</span><span>Message: </span><br />
-      <input name='text'><br />
-        <span>Name: </span><br />
-          <input name='name'>
-            <br />
-              <input type='submit'>
-</form>-->
-
 <input id='title' placeholder='Give your shits a title'></input><br />
 <textarea id='content' placeholder='c o m p o s e'></textarea><br />
+<input id='author' placeholder='Your Name'></input><br />
 <button id='send' onclick='send();'>Send</button>
 
 <script>
   function send () {
     title = document.getElementById('title').value;
     content = document.getElementById('content').value;
-    location.href = `/post?title=${title}&content=${content}&api_key={{ message }}`
+    author = document.getElementById('author').value;
+    location.href = `/post?title=${title}&content=${content}&author=${author}&api_key={{ message }}`
   }
 </script>
