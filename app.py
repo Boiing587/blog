@@ -42,17 +42,17 @@ def post():
                 }
             ]
             """
-            with open('public/posts.json', 'r') as file:    # Open posts.json
-                content = json.loads(file.read())           # Load current posts into variable
+            with open('public/posts.json', 'r') as knut:    # Open posts.json
+                content = json.loads(knut.read())           # Load current posts into variable
                 content.append({                            # Append a new post object
-                    "title": request.args.get('title'),
-                    "author": request.args.get('author'),
-                    "content": request.args.get('content')
+                    "title": request.args.get("title"),
+                    "author": request.args.get("author"),
+                    "content": request.args.get("content")
                 })
-            with open('public/posts.json', 'w') as file:
-                file.write(str(content))
-            with open('public/posts.json', 'r') as file:
-                return jsonify(json.loads(file.read()))
+            with open('public/posts.json', 'w') as knut:
+                knut.write(str(content))
+            with open('public/posts.json', 'r') as knut:
+                return jsonify(json.loads(knut.read()))
     else:
         return '<h1>Wait that\'s <strong>illegal!</strong></h1>'
 

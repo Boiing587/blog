@@ -1,1 +1,1 @@
-[{'author': 'Thomas', 'title': 'Blog 1', 'content': 'this is my epic blog'}, {'author': 'Thomas', 'title': 'Blog 2', 'content': 'this is my epicer blog'}, {'title': 'asd', 'author': 'asd', 'content': 'asd'}]
+[{'author': 'Thomas', 'title': 'Blog 1', 'content': 'this is my epic blog'}, {'author': 'Thomas', 'title': 'Blog 2', 'content': 'this is my epicer blog'}, {'title': 'asd', 'author': 'asd', 'content': 'asd'}, {'title': 'title', 'author': 'Thomas', 'content': 'content'}]
