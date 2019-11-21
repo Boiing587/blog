@@ -42,21 +42,17 @@ def post():
                 }
             ]
             """
-            feeds = []
             with open('public/posts.json', 'r') as knut:    # Open posts.json
                 content = json.loads(knut.read())           # Load current posts into variable
-                """content.append({                            # Append a new post object
+                content.append({                            # Append a new post object
                     "title": request.args.get("title"),
                     "author": request.args.get("author"),
                     "content": request.args.get("content")
-                })"""
-            with open('public/posts.json', mode='w') as bendik:
-                newJson = {"author": request.args.get("author"), "title": request.args.get("title"), "content": request.args.get("content")}
-                for i in range(len(content)):
-                    feeds.append(content[i])
-                feeds.append(newJson)
-                json.dump(feeds, bendik)
-            return content
+                })
+            with open('public/posts.json', 'w') as knut:
+                knut.write(str(content))
+            with open('public/posts.json', 'r') as knut:
+                return jsonify(json.loads(knut.read()))
     else:
         return '<h1>Wait that\'s <strong>illegal!</strong></h1>'
 
