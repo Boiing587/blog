@@ -16,14 +16,23 @@
         .then(res => res.json())
         .then((posts) => {
           console.log(posts)
-          let i = 1;
-          posts.forEach(function (item) {
-            /* document.getElementById('posts').innerHTML += `Post ${i}:`; */
-            document.getElementById('posts').innerHTML += `<h1 id='blogTitle'>${item.title}</h1>`;
-            /* document.getElementById('posts').innerHTML += `<p id='author'>by ${item.author}</p>`; */
-            document.getElementById('posts').innerHTML += `<p id='content'>${item.content}</p>`;
+          console.log(posts.length)
+          for(let i = posts.length -1; i > -1; i--){
+            document.getElementById('posts').innerHTML += `
+              <h1 id='blogTitle'>${posts[i].title}</h1>
+              <p id='author'>by ${posts[i].author}</p>
+              <p id='content'>${posts[i].content}</p>
+              `;
+          }
+
+          /* posts.forEach(function (item) {
+            document.getElementById('posts').innerHTML += `
+              <h1 id='blogTitle'>${i}. ${item.title}</h1>
+              <p id='author'>by ${item.author}</p>
+              <p id='content'>${item.content}</p>
+            `;
             i++;
-          })
+          }) */
         })
         .catch(err => { throw err });
     </script>
