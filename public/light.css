@@ -3,23 +3,22 @@
 }
 
 * {
-  color: white;
+  color: black;
 }
 
 body {
-  background-color: #1c1c1c;
+  background-color: white;
 }
 
 #toolbar {
-  background-color: #101010;
-  color: #d3d3d3;
+  background-color: #eeeeee;
+  color: black;
   height: 100%; /* Full-height: remove this if you want "auto" height */
   width: var(--navsize); /* Set the width of the sidebar */
   position: fixed; /* Fixed Sidebar (stay in place on scroll) */
   z-index: 1; /* Stay on top */
   top: 0; /* Stay at the top */
   left: 0;
-  background-color: #111; /* Black */
   overflow-x: hidden; /* Disable horizontal scroll */
   padding-top: 20px;
   text-align: center;
@@ -39,7 +38,7 @@ body {
 }
 
 #toolbar a:hover:not(#sideHeader) {
-  color: #d1d1d1;
+  color: #202020;
 }
 
 main {
@@ -63,7 +62,7 @@ main {
   padding: 10px;
   padding-top: 1px;
   padding-bottom: 5px;
-  background-color: #222222;
+  background-color: #e3e3e3;
 }
 
 .buttons {

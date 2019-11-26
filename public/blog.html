@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link rel='stylesheet' href='styles.css'>
+    <link rel='stylesheet' href='styles.css' id='mode'>
     <link rel='shortcut icon' href='favicon.ico' />
     <title>Blog</title>
   </head>
@@ -19,9 +19,11 @@
           console.log(posts.length)
           for(let i = posts.length -1; i > -1; i--){
             document.getElementById('posts').innerHTML += `
-              <h1 id='blogTitle'>${posts[i].title}</h1>
-              <p id='author'>by ${posts[i].author}</p>
-              <p id='content'>${posts[i].content}</p>
+              <div id='post'>
+                <h1 id='blogTitle'>${posts[i].title}</h1>
+                <p id='author'>by ${posts[i].author}</p>
+                <p id='content'>${posts[i].content}</p>
+              </div>
               `;
           }
 
