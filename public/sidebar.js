@@ -21,33 +21,33 @@ function lightMode(){
   mode.setAttribute('href', 'light.css')
 }
 
-function lightCookie(){
-  document.cookie = "mode=light; expires=Fri, 1 Jan 2021 12:00:00 UTC; path=/";
+function lightStored(){
+  localStorage.setItem('mode', 'light');
 }
 
 function darkMode(){
   mode.setAttribute('href', 'styles.css')
 }
 
-function darkCookie(){
-  document.cookie = "mode=dark; expires=Fri, 1 Jan 2021 12:00:00 UTC; path=/";
+function darkStored(){
+  localStorage.setItem('mode', 'dark');
 }
 
 function light(){
   lightMode()
-  lightCookie()
+  lightStored()
 }
 
 function dark(){
   darkMode()
-  darkCookie()
+  darkStored()
 }
 
-function getCookie(){
-  var x = document.cookie;
-  if (x.indexOf('mode=light') > -1) {
+function getMode(){
+  var x = localStorage.getItem('mode')
+  if (x == "light") {
     mode.setAttribute('href', 'light.css')
-  } else if (x.indexOf('mode=dark') > -1) {
+  } else if (x == "dark") {
     mode.setAttribute('href', 'styles.css')
   }
 }
