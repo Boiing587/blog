@@ -30,7 +30,7 @@ function darkMode(){
 }
 
 function darkStored(){
-  localStorage.setItem('mode', 'dark');
+  localStorage.setItem('mode', 'styles');
 }
 
 function light(){
@@ -42,12 +42,14 @@ function dark(){
   darkMode()
   darkStored()
 }
-
+/*
 function getMode(){
   var x = localStorage.getItem('mode')
   if (x == "light") {
-    mode.setAttribute('href', 'light.css')
+    mode.setAttribute('href', 'light')
   } else if (x == "dark") {
-    mode.setAttribute('href', 'styles.css')
+    mode.setAttribute('href', 'styles')
   }
 }
+*/
+document.write(`<link rel="stylesheet" href="${localStorage.getItem('mode')}.css"`)
