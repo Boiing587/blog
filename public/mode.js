@@ -3,29 +3,24 @@ var mode = document.getElementById('mode');
 localStorage.setItem('mode', 'styles');
 
 function lightMode(){
+  var mode = document.getElementById('mode');
   mode.setAttribute('href', 'light.css');
-}
-
-function lightStored(){
   localStorage.setItem('mode', 'light');
 }
 
 function darkMode(){
+  var mode = document.getElementById('mode');
   mode.setAttribute('href', 'styles.css');
-}
-
-function darkStored(){
   localStorage.setItem('mode', 'styles');
 }
 
+
 function light(){
   lightMode();
-  lightStored();
 }
 
 function dark(){
   darkMode();
-  darkStored();
 }
 /*
 function getMode(){
