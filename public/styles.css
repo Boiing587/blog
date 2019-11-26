@@ -1,3 +1,5 @@
+/* General */
+
 :root {
   --navsize: 10rem;
 }
@@ -9,6 +11,8 @@
 body {
   background-color: #1c1c1c;
 }
+
+/* Toolbar and main */
 
 #toolbar {
   background-color: #101010;
@@ -42,10 +46,22 @@ body {
   color: #d1d1d1;
 }
 
+.buttons {
+  position: absolute;
+  bottom: 0;
+  margin: 3rem;
+}
+
+.button {
+  margin: 2px;
+}
+
 main {
   margin-left: var(--navsize); /* Same as the width of the sidebar */
   padding: 0px 10px;
 }
+
+/* Blog */
 
 #author {
   font-size: 13px;
@@ -66,12 +82,3 @@ main {
   background-color: #222222;
 }
 
-.buttons {
-  position: absolute;
-  bottom: 0;
-  margin: 3rem;
-}
-
-.button {
-  margin: 2px;
-}
