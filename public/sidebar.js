@@ -17,6 +17,8 @@ document.write(`
 `);
 
 mode = document.getElementById('mode');
+localStorage.setItem('mode', 'styles')
+
 function lightMode(){
   mode.setAttribute('href', 'light.css')
 }
