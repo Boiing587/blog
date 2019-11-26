@@ -48,9 +48,9 @@ function dark(){
 
 function getCookie(){
   var x = document.cookie;
-  if (x.indexOf('mode=light') == true) {
+  if (x.indexOf('mode=light') > -1) {
     mode.setAttribute('href', 'light.css')
-  } else if (x.indexOf('mode=dark') == true) {
+  } else if (x.indexOf('mode=dark') > -1) {
     mode.setAttribute('href', 'styles.css')
   }
 }
