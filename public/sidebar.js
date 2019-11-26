@@ -16,6 +16,7 @@ document.write(`
 
 `);
 
+document.write(`<link rel="stylesheet" href="${localStorage.getItem('mode')}.css" id='mode'`)
 mode = document.getElementById('mode');
 localStorage.setItem('mode', 'styles')
 
@@ -54,4 +55,3 @@ function getMode(){
   }
 }
 */
-document.write(`<link rel="stylesheet" href="${localStorage.getItem('mode')}.css" id="mode"`)
