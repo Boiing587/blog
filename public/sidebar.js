@@ -33,9 +33,6 @@ function darkCookie(){
   document.cookie = "mode=dark; expires=Fri, 1 Jan 2021 12:00:00 UTC; path=/";
 }
 
-
-
-
 function light(){
   lightMode()
   lightCookie()
@@ -49,8 +46,8 @@ function dark(){
 function getCookie(){
   var x = document.cookie;
   if (x.indexOf('mode=light') > -1) {
-    mode.setAttribute('href', 'light.css')
+    document.write('<link rel="stylesheet" href="light.css" id="mode">')
   } else if (x.indexOf('mode=dark') > -1) {
-    mode.setAttribute('href', 'styles.css')
+    document.write('<link rel="stylesheet" href="styles.css" id="mode"')
   }
 }
