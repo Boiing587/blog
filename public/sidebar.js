@@ -54,4 +54,4 @@ function getMode(){
   }
 }
 */
-document.write(`<link rel="stylesheet" href="${localStorage.getItem('mode')}.css"`)
+document.write(`<link rel="stylesheet" href="${localStorage.getItem('mode')}.css" id="mode"`)
