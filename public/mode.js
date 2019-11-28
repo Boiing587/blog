@@ -22,13 +22,3 @@ function light(){
 function dark(){
   darkMode();
 }
-/*
-function getMode(){
-  var x = localStorage.getItem('mode')
-  if (x == "light") {
-    mode.setAttribute('href', 'light')
-  } else if (x == "dark") {
-    mode.setAttribute('href', 'styles')
-  }
-}
-*/
