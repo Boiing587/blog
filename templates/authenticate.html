@@ -12,7 +12,7 @@
     </main>
     <script>
       function confirmPass() {
-        apiPass = document.getElementById('pass')
+        apiPass = document.getElementById('pass').value;
         location.href = `/compose?api_key=${apiPass}`
       }           
     </script>
