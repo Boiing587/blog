@@ -22,6 +22,7 @@
                 <h1 id='blogTitle'>${posts[i].title}</h1>
                 <p id='author'>by ${posts[i].author}</p>
                 <p id='content'>${posts[i].content}</p>
+                <span id='delete' title='Delete this post'><img src='img/${localStorage.getItem('mode')}.png'></span>
               </div>
               `;
           }
