@@ -26,7 +26,7 @@ def compose():
     if request.args['api_key'] == apiKey:
         return render_template('compose.html', message=request.args['api_key'])
     else:
-        return redirect('/./public', 'authenticate.html')
+        return redirect('./public', 'authenticate.html')
 
 @app.route('/post', methods=['GET'])
 def post():
