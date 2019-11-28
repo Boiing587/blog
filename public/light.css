@@ -90,7 +90,7 @@ main {
   background-color: #efefef;
 }
 
-#img {
+#img.resize {
   height: 20px;
   width: 20px;
 }
