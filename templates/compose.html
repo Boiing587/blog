@@ -1,13 +1,22 @@
-<input id='title' placeholder='Give your shits a title'></input><br />
-<textarea class='input' id='content' placeholder='c o m p o s e'></textarea><br />
-<input id='author' placeholder='Your Name'></input><br />
-<button id='send' onclick='send();'>Send</button>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>New post</title>
+  </head>
+  <body>
+    <h2>Let's make a new blog post.</h2>
+    <input id='title' placeholder='Give your post a title'></input><br />
+    <textarea class='input' id='content' placeholder='Write the post here'></textarea><br />
+    <input id='author' placeholder='[Name, date(ex. August 8th 2019)]'></input><br />
+    <button id='send' onclick='send();'>Send</button>
 
-<script>
-  function send () {
-    title = document.getElementById('title').value;
-    content = document.getElementById('content').value;
-    author = document.getElementById('author').value;
-    location.href = `/post?title=${title}&content=${content}&author=${author}&api_key={{ message }}`
-  }
-</script>
+    <script>
+      function send () {
+        title = document.getElementById('title').value;
+        content = document.getElementById('content').value;
+        author = document.getElementById('author').value;
+        location.href = `/post?title=${title}&content=${content}&author=${author}&api_key={{ message }}`
+      }
+    </script>
+  </body>
+</html>
