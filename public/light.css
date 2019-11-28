@@ -42,7 +42,7 @@ body {
 }
 
 #toolbar a:hover:not(#sideHeader) {
-  color: #202020;
+  color: #404040;
 }
 
 #hidden {
