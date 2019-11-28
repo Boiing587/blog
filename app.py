@@ -23,9 +23,13 @@ def authenticate():
 
 @app.route('/compose', methods=['GET'])
 def compose():
-    if request.args['api_key'] == apiKey:
-        return render_template('compose.html', message=request.args['api_key'])
-    return redirect('authenticate')
+    try:
+        if request.args['api_key'] == apiKey:
+            return render_template('compose.html', message=request.args['api_key'])
+        else:
+            return redirect('authenticate')
+    except:
+        return redirect('authenticate')
 
 @app.route('/post', methods=['GET'])
 def post():
