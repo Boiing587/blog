@@ -27,6 +27,7 @@ def compose():
         return render_template('compose.html', message=request.args['api_key'])
     else:
         return redirect('authenticate')
+    return redirect('authenticate')
 
 @app.route('/post', methods=['GET'])
 def post():
