@@ -19,7 +19,7 @@ def serve(path):
 
 @app.route('/authenticate', methods=['GET'])
 def authenticate():
-    return render_template('authenticate.html', message=request.args['api_key'])
+    return render_template('authenticate.html')
 
 @app.route('/compose', methods=['GET'])
 def compose():
