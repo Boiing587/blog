@@ -17,12 +17,16 @@ def index():
 def serve(path):
     return send_from_directory('./public', path)
 
+@app.route('/authenticate', methods=['GET'])
+def authenticate():
+    return send_from_directory('./public', 'authenticate.html')
+
 @app.route('/compose', methods=['GET'])
 def compose():
     if request.args['api_key'] == apiKey:
         return render_template('compose.html', message=request.args['api_key'])
     else:
-        return '<h1>Wait that\'s <strong>illegal!</strong></h1>'
+        return redirect('/./public', 'authenticate.html')
 
 @app.route('/post', methods=['GET'])
 def post():

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Enter the API key</title>
+    <script src='sidebar.js'></script>
+  </head>
+  <body>
+    <main>
+      <h2>Enter the API key to continue</h2>
+      <textarea id='pass' placeholder="Enter API key here"></textarea>
+      <button id='send' onclick='confirmPass();'>Confirm</button>
+    </main>
+    <script>
+      function confirmPass() {
+        pass = document.getElementById('pass')
+        location.href(`/compose?api_key=${apiKey}`)
+      }           
+    </script>
+  </body>
+</html>
