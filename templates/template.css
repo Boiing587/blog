@@ -1,9 +1,15 @@
 input {
   font-family: Georgia;
+  font-size: 12px;
+}
+
+input#author {
+  width: 20px;
 }
 
 textarea {
   font-family: Georgia;
   height: 50px;
   width: 200px;
+  font-size: 12px;
 }
