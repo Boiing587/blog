@@ -1,4 +1,4 @@
-document.write(`<link rel="stylesheet" href="${localStorage.getItem('mode')}.css" id='mode'`);
+document.write(`<link rel="stylesheet" href="${localStorage.getItem('mode')}.css" id='mode'>`);
 var mode = document.getElementById('mode');
 
 
