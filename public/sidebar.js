@@ -25,7 +25,6 @@ function dark(){
 
 
 document.write(`
-  <link rel='stylesheet' href=${localStorage.getItem('mode')}.css id='mode'>
   <div id='toolbar'>
     <a id='sideHeader'>Navigation</a>
     <a href='/'>Home</a>
