@@ -1,0 +1,9 @@
+input {
+  font-family: Georgia;
+}
+
+textarea {
+  font-family: Georgia;
+  height: 50px;
+  width: 200px;
+}
