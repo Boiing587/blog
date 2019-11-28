@@ -45,6 +45,14 @@ body {
   color: #d1d1d1;
 }
 
+#hidden {
+  color: #101010;
+}
+
+#hidden:hover {
+  color: #d3d3d3;
+}
+
 .buttons {
   position: absolute;
   bottom: 0;

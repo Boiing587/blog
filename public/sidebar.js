@@ -33,6 +33,7 @@ document.write(`
     <a id='sideHeader'>External links</a>
     <a href='https://www.repl.it/@Boiing587'>My repl.it page</a>
     <a href='https://www.youtube.com/watch?v=dQw4w9WgXcQ'>Very good page</a>
+    <a id='hidden'>Write a new blog post</a>
     <div class='buttons'>
       <button class='button' onclick='light()'>🔅</button>
       <button class='button' onclick='dark()'>🌙</button>

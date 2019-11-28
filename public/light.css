@@ -45,6 +45,14 @@ body {
   color: #202020;
 }
 
+#hidden {
+  color: #eeeeee;
+}
+
+#hidden:hover {
+  color: black;
+}
+
 .buttons {
   position: absolute;
   bottom: 0;
