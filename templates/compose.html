@@ -4,13 +4,14 @@
     <title>New post</title>
     <script src='/public/sidebar.js'></script>
   </head>
-  <body>
-    <h2>Let's make a new blog post.</h2>
-    <input id='title' placeholder='Give your post a title'></input><br />
-    <textarea class='input' id='content' placeholder='Write the post here'></textarea><br />
-    <input id='author' placeholder='[Name, date(ex. August 8th 2019)]'></input><br />
-    <button id='send' onclick='send();'>Send</button>
-
+  <body onload='getCookie()'>
+    <main>
+      <h2>Let's make a new blog post.</h2>
+      <input id='title' placeholder='Give your post a title'></input><br />
+      <textarea class='input' id='content' placeholder='Write the post here'></textarea><br />
+      <input id='author' placeholder='[Name, date(ex. August 8th 2019)]'></input><br />
+      <button id='send' onclick='send();'>Send</button>
+    </main>
     <script>
       function send () {
         title = document.getElementById('title').value;
