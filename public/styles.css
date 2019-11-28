@@ -90,3 +90,7 @@ main {
   background-color: #222222;
 }
 
+#delete {
+  height: 20px;
+  width: 20px;
+}
