@@ -17,10 +17,14 @@ function darkMode(){
 
 function light(){
   lightMode();
+  document.getElementById('lightimg').style.visibility='visible';
+  document.getElementById('darkimg').style.visibility='hidden';
 }
 
 function dark(){
   darkMode();
+  document.getElementById('darkimg').style.visibility='visible';
+  document.getElementById('lightimg').style.visibility='hidden';
 }
 
 
