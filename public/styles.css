@@ -71,6 +71,11 @@ main {
 
 /* Blog */
 
+#new {
+  vertical-align: middle;
+  text-decoration: none;
+}
+
 #author {
   font-size: 13px;
 }
