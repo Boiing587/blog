@@ -74,6 +74,7 @@ main {
 #new {
   vertical-align: middle;
   text-decoration: none;
+  position: absolute;
   right: 5%;
   top: 5%
 }
