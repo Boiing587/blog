@@ -71,6 +71,11 @@ main {
 
 /* Blog */
 
+#new {
+  width: inherit;
+  height: inherit;
+}
+
 #author {
   font-size: 13px;
 }
