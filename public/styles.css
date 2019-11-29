@@ -74,6 +74,8 @@ main {
 #new {
   vertical-align: middle;
   text-decoration: none;
+  right: 5%;
+  top: 5%
 }
 
 #author {
