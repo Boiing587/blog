@@ -25,14 +25,15 @@
                 <span class='delete' id='mode' title='Delete this post'><img id='lightimg' src='img/light.png'><img id='darkimg' src='img/styles.png'></span>
               </div>
               `;
-          }
-          if (localStorage.getItem('mode') == 'light') {
+            if (localStorage.getItem('mode') == 'light') {
             document.getElementById('darkimg').style.visibility='hidden';
             document.getElementById('lightimg').style.visibility='visible';
-          } else if (localStorage.getItem('mode') == 'styles') {
+            } else if (localStorage.getItem('mode') == 'styles') {
             document.getElementById('lightimg').style.visibility='hidden';
             document.getElementById('darkimg').style.visibility='visible';
+            }
           }
+
 
           /* posts.forEach(function (item) {
             document.getElementById('posts').innerHTML += `
