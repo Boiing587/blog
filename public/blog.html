@@ -22,16 +22,9 @@
                 <h1 id='blogTitle'>${posts[i].title}</h1>
                 <p id='author'>by ${posts[i].author}</p>
                 <p id='content'>${posts[i].content}</p>
-                <span class='delete' id='mode' title='Delete this post'><img id='lightimg' src='img/light.png'><img id='darkimg' src='img/styles.png'></span>
+                <span class='delete' id='mode' title='Delete this post'><img id='trash' src='img/${localStorage.getItem('mode')}.png'></span>
               </div>
               `;
-            if (localStorage.getItem('mode') == 'light') {
-            document.getElementById('darkimg').style.visibility='hidden';
-            document.getElementById('lightimg').style.visibility='visible';
-            } else if (localStorage.getItem('mode') == 'styles') {
-            document.getElementById('lightimg').style.visibility='hidden';
-            document.getElementById('darkimg').style.visibility='visible';
-            }
           }
 
 
