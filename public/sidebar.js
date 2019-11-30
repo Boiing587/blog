@@ -14,15 +14,19 @@ function darkMode(){
   localStorage.setItem('mode', 'styles');
 }
 
-
+var x = document.getElementsByClassName('trash')
 function light(){
   lightMode();
-  document.getElementsByClassName('trash').src='img/light.png';
+  for (var i = 0; i < x.length; i++) {
+    x[i].src = 'img/light.png'
+  }
 }
 
 function dark(){
   darkMode();
-  document.getElementsByClassName('trash').src='img/styles.png';
+  for (var i = 0; i < x.length; i++) {
+    x[i].src = 'img/light.png'
+  }
 }
 
 
