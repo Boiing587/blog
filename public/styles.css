@@ -73,6 +73,10 @@ main {
   padding: 0px 10px;
 }
 
+#pass {
+  color: black;
+}
+
 /* Blog */
 
 #new {
