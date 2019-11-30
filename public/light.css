@@ -74,9 +74,9 @@ main {
 #new {
   vertical-align: middle;
   text-decoration: none;
-  position: absolute;
-  right: 5%;
-  top: 5%;
+  position: relative;
+  left: 95%;
+  top: 5px;
 }
 
 #author {
