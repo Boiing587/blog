@@ -27,7 +27,7 @@ function dark(){
   var x = document.getElementsByClassName('trash')
   darkMode();
   for (var i = 0; i < x.length; i++) {
-    x[i].src = 'img/light.png'
+    x[i].src = 'img/styles.png'
   }
 }
 
