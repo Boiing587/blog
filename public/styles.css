@@ -9,10 +9,6 @@
   font-family: Georgia;
 }
 
-*:not(button) {
-  color: black;
-}
-
 body {
   background-color: #1c1c1c;
 }
@@ -66,6 +62,10 @@ body {
 
 .button {
   margin: 2px;
+}
+
+button {
+  color: black;
 }
 
 main {
