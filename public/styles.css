@@ -4,9 +4,13 @@
   --navsize: 10rem;
 }
 
-*:not(button) {
+* {
   color: white;
   font-family: Georgia;
+}
+
+*:not(button) {
+  color: black;
 }
 
 body {
