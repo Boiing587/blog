@@ -14,8 +14,9 @@ function darkMode(){
   localStorage.setItem('mode', 'styles');
 }
 
-var x = document.getElementsByClassName('trash')
+
 function light(){
+  var x = document.getElementsByClassName('trash')
   lightMode();
   for (var i = 0; i < x.length; i++) {
     x[i].src = 'img/light.png'
@@ -23,6 +24,7 @@ function light(){
 }
 
 function dark(){
+  var x = document.getElementsByClassName('trash')
   darkMode();
   for (var i = 0; i < x.length; i++) {
     x[i].src = 'img/light.png'
