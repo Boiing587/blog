@@ -17,12 +17,12 @@ function darkMode(){
 
 function light(){
   lightMode();
-  document.getElementById('trash').src='img/light.png';
+  document.getElementsByClassName('trash').src='img/light.png';
 }
 
 function dark(){
   darkMode();
-  document.getElementById('trash').src='img/styles.png';
+  document.getElementsByClassName('trash').src='img/styles.png';
 }
 
 
