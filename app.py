@@ -8,6 +8,7 @@ load_dotenv(os.path.join(os.path.dirname(__file__), '.env'))
 app = Flask(__name__, static_url_path='/public')
 port = os.getenv('PORT', 8080)
 apiKey = os.getenv('API_KEY', '')
+delKey = os.getenv('DEL_KEY', '')
 
 @app.route('/', methods=['GET'])
 def index():
