@@ -56,6 +56,10 @@ def post():
     else:
         return '<h1>Wait that\'s <strong>illegal!</strong></h1>'
 
+@app.route('/delete')
+def delete():
+    return render_template('delete.html')
+
 @app.route('/test')
 def test():
     return send_from_directory('./public', 'test.html')

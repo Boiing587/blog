@@ -23,7 +23,7 @@
                 <h1 id='blogTitle'>${posts[i].title}</h1>
                 <p id='author'>by ${posts[i].author}</p>
                 <p id='content'>${posts[i].content}</p>
-                <span class='delete' id='mode' title='Delete this post'><img class='trash' src='img/${localStorage.getItem('mode')}.png'></span>
+                <span class='delete' id='mode' title='Delete this post'><a href='/delete'><img class='trash' src='img/${localStorage.getItem('mode')}.png'></a></span>
               </div>
               `;
           }
