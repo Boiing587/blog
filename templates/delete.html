@@ -13,7 +13,7 @@
       <button onclick='location.href="/blog.html"'>Back</button>
     </main>
     <script>
-      document.getElementById('postName').innerHTML = 'posts[localStorage.getItem("postIndex")].title'
+      document.getElementById('postName').innerHTML = `${posts[localStorage.getItem('postIndex')].title}`
     </script>
   </body>
 </html>
