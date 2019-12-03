@@ -7,9 +7,13 @@
   <body>
     <main>
       <h2>Are you sure you want to delete this post?</h2>
+      <h3 id='postName'></h3>
       <input type='password' id='pass' placeholder="Enter key here"></input><br />
       <button id='send'>Confirm</button><br /><br />
       <button onclick='location.href="/blog.html"'>Back</button>
     </main>
+    <script>
+      document.getElementById('postName').innerHTML = posts[localStorage.getItem('postIndex')].title
+    </script>
   </body>
 </html>

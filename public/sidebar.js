@@ -47,7 +47,8 @@ document.write(`
 
 `);
 
-function getClass(lmao) {
-  alert(lmao)
+function getClass(num) {
+  localStorage.setItem('postIndex', num);
+  window.location.href = '/delete'
 }
 
