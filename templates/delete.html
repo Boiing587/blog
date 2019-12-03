@@ -17,7 +17,7 @@
       .then(res => res.json())
       .then((posts) => {
         var x = parseInt(localStorage.getItem('postIndex'));
-        document.getElementById('postName').innerHTML = `${posts[x].title}`
+        document.getElementById('postName').innerHTML = `"${posts[x].title}"`
       });
     </script>
   </body>
