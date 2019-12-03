@@ -28,7 +28,10 @@
               `;
           }
 
-
+          $("span").click(function() {
+            var myClass = this.className;
+            alert(myClass);
+          });
           /* posts.forEach(function (item) {
             document.getElementById('posts').innerHTML += `
               <h1 id='blogTitle'>${i}. ${item.title}</h1>

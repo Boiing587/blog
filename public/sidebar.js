@@ -47,8 +47,4 @@ document.write(`
 
 `);
 
-$("a").click(function() {
-  var myClass = this.className;
-  alert(myClass);
-});
 
