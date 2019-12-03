@@ -30,11 +30,6 @@ function dark(){
   }
 }
 
-$("a").click(function() {
-  var myClass = this.className;
-  alert(myClass);
-});
-
 document.write(`
   <div id='toolbar'>
     <a id='sideHeader'>Navigation</a>
@@ -52,4 +47,8 @@ document.write(`
 
 `);
 
+$("a").click(function() {
+  var myClass = this.className;
+  alert(myClass);
+});
 
