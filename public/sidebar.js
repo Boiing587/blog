@@ -49,6 +49,6 @@ document.write(`
 
 function getClass(lmao) {
   alert(lmao)
-  window.location.href('/delete')
+  window.location.href('https://thomsa.me/delete')
 }
 
