@@ -14,8 +14,11 @@
     </main>
     <script>
       fetch('/posts.json')
-      var x = parseInt(localStorage.getItem('postIndex'));
-      document.getElementById('postName').innerHTML = `${posts[x].title}`
+      .then(res => res.json())
+      .then((posts) => {
+        var x = parseInt(localStorage.getItem('postIndex'));
+        document.getElementById('postName').innerHTML = `${posts[x].title}`
+      });
     </script>
   </body>
 </html>
