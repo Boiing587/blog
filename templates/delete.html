@@ -13,7 +13,8 @@
       <button onclick='location.href="/blog.html"'>Back</button>
     </main>
     <script>
-      document.getElementById('postName').innerHTML = `${posts[localStorage.getItem('postIndex')].title}`
+      var x = parseInt(localStorage.getItem('postIndex'));
+      document.getElementById('postName').innerHTML = `${posts[x].title}`
     </script>
   </body>
 </html>
