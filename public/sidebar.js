@@ -48,6 +48,6 @@ document.write(`
 `);
 
 function getClass(lmao) {
-  window.location.href('https://thomsa.me/delete')
+  alert(lmao)
 }
 
