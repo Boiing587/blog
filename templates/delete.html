@@ -13,6 +13,7 @@
       <button onclick='location.href="/blog.html"'>Back</button>
     </main>
     <script>
+      fetch('/posts.json')
       var x = parseInt(localStorage.getItem('postIndex'));
       document.getElementById('postName').innerHTML = `${posts[x].title}`
     </script>
