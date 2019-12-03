@@ -30,6 +30,10 @@ function dark(){
   }
 }
 
+$("a").click(function() {
+  var myClass = this.className;
+  alert(myClass);
+});
 
 document.write(`
   <div id='toolbar'>
