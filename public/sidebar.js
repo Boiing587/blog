@@ -47,4 +47,7 @@ document.write(`
 
 `);
 
+function getClass(lmao) {
+  alert(lmao)
+}
 

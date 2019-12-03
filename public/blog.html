@@ -23,15 +23,13 @@
                 <h1 id='blogTitle'>${posts[i].title}</h1>
                 <p id='author'>by ${posts[i].author}</p>
                 <p id='content'>${posts[i].content}</p>
-                <span class='delete' id='mode' title='Delete this post'><a class=${[i]}><img class='trash' src='img/${localStorage.getItem('mode')}.png'></a></span>
+                <span class='delete' id='mode' title='Delete this post'><a class=${[i]} onclick='getClass(this.className)'><img class='trash' src='img/${localStorage.getItem('mode')}.png'></a></span>
               </div>
               `;
           }
 
-          $("span").click(function() {
-            var myClass = this.className;
-            alert(myClass);
-          });
+            console.log(e); // then e.srcElement.className has the class
+          }​
           /* posts.forEach(function (item) {
             document.getElementById('posts').innerHTML += `
               <h1 id='blogTitle'>${i}. ${item.title}</h1>
