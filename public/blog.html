@@ -19,7 +19,7 @@
           console.log(posts.length)
           for(let i = posts.length -1; i > -1; i--){
             document.getElementById('posts').innerHTML += `
-              <div id='post'>
+              <div class='post' id='${[i]}'>
                 <h1 id='blogTitle'>${posts[i].title}</h1>
                 <p id='author'>by ${posts[i].author}</p>
                 <p id='content'>${posts[i].content}</p>
