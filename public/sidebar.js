@@ -49,6 +49,6 @@ document.write(`
 
 function getClass(lmao) {
   alert(lmao)
-  location.href('/delete')
+  window.location.href('/delete')
 }
 
