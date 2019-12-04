@@ -21,6 +21,7 @@
       });
 
       function confirmKey() {
+        var x = parseInt(localStorage.getItem('postIndex'));
         delKey = document.getElementById('pass').value;
         location.href = `/del?post_index=${x}&api_key=${delKey}`
       }
