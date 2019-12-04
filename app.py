@@ -57,7 +57,7 @@ def post():
     else:
         return '<h1>Wait that\'s <strong>illegal!</strong></h1>'
 
-@app.route('/delete')
+@app.route('/delete', methods=['GET'])
 def delete():
     return render_template('delete.html', message=request.args['api_key'])
 
