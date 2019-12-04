@@ -69,7 +69,7 @@ def delRedirect():
         else:
             return redirect('/delete')
     except:
-        return refirect('/delete')
+        return redirect('/delete')
 
 
 @app.route('/test')
