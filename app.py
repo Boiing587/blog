@@ -57,9 +57,9 @@ def post():
     else:
         return '<h1>Wait that\'s <strong>illegal!</strong></h1>'
 
-@app.route('/delete', deleteKey=request.args['del_key'])
+@app.route('/delete')
 def delete():
-    return render_template('delete.html')
+    return render_template('delete.html', deleteKey=request.args['del_key'])
 
 @app.route('/del')
 def delRedirect():
