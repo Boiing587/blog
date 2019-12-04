@@ -63,10 +63,13 @@ def delete():
 
 @app.route('/del')
 def delRedirect():
-    if request.args['api_key'] == delKey:
-        return render_template('deleteTest.html')
-    else:
-        return redirect('/delete')
+    try:
+        if request.args['api_key'] == delKey:
+            return render_template('deleteTest.html')
+        else:
+            return redirect('/delete')
+    except:
+        return refirect('/delete')
 
 
 @app.route('/test')
