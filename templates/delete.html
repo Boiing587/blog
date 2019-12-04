@@ -9,7 +9,7 @@
       <h2>Are you sure you want to delete this post?</h2>
       <h3 id='postName'></h3>
       <input type='password' id='pass' placeholder="Enter key here"></input><br />
-      <button id='send'>Confirm</button><br /><br />
+      <button id='send' onclick='confirmKey()'>Confirm</button><br /><br />
       <button onclick='location.href="/blog.html"'>Back</button>
     </main>
     <script>
@@ -19,6 +19,11 @@
         var x = parseInt(localStorage.getItem('postIndex'));
         document.getElementById('postName').innerHTML = `"${posts[x].title}"`
       });
+
+      function confirmKey() {
+        delKey = document.getElementById('pass').value;
+        location.href = `/del?del_key=${delKey}`
+      }
     </script>
   </body>
 </html>
