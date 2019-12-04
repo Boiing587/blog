@@ -59,7 +59,7 @@ def post():
 
 @app.route('/delete')
 def delete():
-    return render_template('delete.html')
+    return render_template('delete.html', message=request.args['api_key'])
 
 @app.route('/del')
 def delRedirect():
