@@ -8,7 +8,7 @@
     <main>
       <h2>Do you really want to delete this post?</h2>
       <h3 id='postName'></h3>
-      <input id='name' placeholder="Enter the post's name to delete it">
+      <input class='input' id='name' placeholder="Enter the post's name to delete it">
       <button class='disabled'>Yes</button>
       <button>No</button>
     </main>
@@ -19,13 +19,14 @@
         var x = parseInt(localStorage.getItem('postIndex'));
         console.log(x)
         document.getElementById('postName').innerHTML = `"${posts[x].title}"`
-      });
-      while (true) {
-        var value = document.getElementById('name')
-        if (value == posts[x].title) {
-          element.classList.remove('disabled')
+        while (true) {
+          var value = document.getElementById('name')
+          if (value == posts[x].title) {
+            element.classList.remove('disabled')
+          }
         }
-      }
+      });
+
     </script>
   </body>
 </html>
