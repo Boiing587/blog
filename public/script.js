@@ -89,4 +89,5 @@ function codeSubmit() {
   var key = document.getElementById('codeInput').value;
   document.getElementById('codeInput').value = '';
   console.log(key)
+  cookie.set('inputKey', key)
 }

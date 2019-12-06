@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 import os
 import json
-from flask import Flask, send_from_directory, render_template, request, jsonify, redirect
+from flask import flask, Flask, send_from_directory, render_template, request, jsonify, redirect
 from dotenv import load_dotenv
 load_dotenv(os.path.join(os.path.dirname(__file__), '.env'))
 
@@ -20,10 +20,21 @@ def serve(path):
 
 @app.route('/authenticate', methods=['GET'])
 def authenticate():
-    return render_template('authenticate.html')
+    x = request.cookies.get('inputKey')
+    if x == apiKey:
+        return redirect('compose')
+    else:
+        return render_template('authenticate.html')
 
 @app.route('/compose', methods=['GET'])
 def compose():
+    x = request.cookies.get('inputKey')
+    if x == apiKey:
+        return render_template('compose.html')
+    else:
+        return redirect('authenticate')
+
+    """
     try:
         if request.args['api_key'] == apiKey:
             return render_template('compose.html', message=request.args['api_key'])
@@ -31,6 +42,7 @@ def compose():
             return redirect('authenticate')
     except:
         return redirect('authenticate')
+    """
 
 @app.route('/post', methods=['GET'])
 def post():
@@ -59,18 +71,23 @@ def post():
 
 @app.route('/delete', methods=['GET'])
 def delete():
-    return render_template('delete.html')
+    x = request.cookies.get('inputKey')
+    if x == delKey:
+        return redirect('confirm')
+    else:
+        return render_template('delete.html')
+
+@app.route('/confirm')
+def confirmDelete():
+    x = request.cookies.get('inputKey')
+    if x == delKey:
+        return render_template('confirm.html')
+    else:
+        return redirect('delete')
 
 @app.route('/del')
 def delRedirect():
-    try:
-        if request.args['api_key'] == delKey:
-            return render_template('deleteTest.html')
-        else:
-            return redirect('/delete')
-    except:
-        return redirect('/delete')
-
+    return render_template('deleteTest.html')
 
 @app.route('/test')
 def test():
