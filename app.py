@@ -20,7 +20,7 @@ def serve(path):
 
 @app.route('/authenticate', methods=['GET'])
 def authenticate():
-    x = request.cookies.get('inputKey')
+    x = request.cookies.get('postKey')
     if x == apiKey:
         return redirect('compose')
     else:
@@ -28,7 +28,7 @@ def authenticate():
 
 @app.route('/compose', methods=['GET'])
 def compose():
-    x = request.cookies.get('inputKey')
+    x = request.cookies.get('postKey')
     if x == apiKey:
         return render_template('compose.html')
     else:
@@ -71,23 +71,19 @@ def post():
 
 @app.route('/delete', methods=['GET'])
 def delete():
-    x = request.cookies.get('inputKey')
-    if x == delKey:
+    y = request.cookies.get('delKey')
+    if y == delKey:
         return redirect('confirm')
     else:
         return render_template('delete.html')
 
 @app.route('/confirm')
 def confirmDelete():
-    x = request.cookies.get('inputKey')
-    if x == delKey:
+    y = request.cookies.get('delKey')
+    if y == delKey:
         return render_template('confirm.html')
     else:
         return redirect('delete')
-
-@app.route('/del')
-def delRedirect():
-    return render_template('deleteTest.html')
 
 @app.route('/test')
 def test():

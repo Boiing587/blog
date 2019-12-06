@@ -6,23 +6,16 @@
   </head>
   <body>
     <main>
-      <h2>Are you sure you want to delete this post?</h2>
-      <h3 id='postName'></h3>
-      <input type='password' class='pass' placeholder="Enter key here"></input><br />
+      <h2>You need to authenticate yourself if you want to delete posts.</h2>
+      <input type='password' class='pass' id='delApi' placeholder="Enter key here"></input><br />
       <button id='send' onclick='confirmKey()'>Confirm</button><br /><br />
       <button onclick='location.href="/blog.html"'>Back</button>
     </main>
     <script>
-      fetch('/posts.json')
-      .then(res => res.json())
-      .then((posts) => {
-        var x = parseInt(localStorage.getItem('postIndex'));
-        document.getElementById('postName').innerHTML = `"${posts[x].title}"`
-      });
-
       function confirmKey() {
         var x = parseInt(localStorage.getItem('postIndex'));
-        delKey = document.getElementById('pass').value;
+        delKey = document.getElementById('delApi').value;
+        cookies.set('delKey', delKey)
         location.href = `/del?post_index=${x}&api_key=${delKey}`
       }
     </script>

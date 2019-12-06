@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Confirm deletion</title>
+    <script src='script.js'></script>
+  </head>
+  <body>
+    <main>
+      <h2>Do you really want to delete this post?</h2>
+      <h3 id='postName'></h3>
+      <button>Yes</button>
+      <button>No</button>
+    </main>
+    <script>
+      fetch('/posts.json')
+      .then(res => res.json())
+      .then((posts) => {
+        var x = parseInt(localStorage.getItem('postIndex'));
+        document.getElementById('postName').innerHTML = `"${posts[x].title}"`
+      });
+    </script>
+  </body>
+</html>
