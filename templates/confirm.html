@@ -19,12 +19,6 @@
         var x = parseInt(localStorage.getItem('postIndex'));
         console.log(x)
         document.getElementById('postName').innerHTML = `"${posts[x].title}"`
-        while (true) {
-          var value = document.getElementById('name')
-          if (value == posts[x].title) {
-            element.classList.remove('disabled')
-          }
-        }
       });
 
     </script>
