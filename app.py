@@ -40,7 +40,7 @@ def post():
     if x == apiKey:
         if 'title' in request.args and 'content' in request.args and 'author' in request.args:
             if request.args.get('title') == "" and request.args.get('content') == "" and request.args.get('author') == "":
-                return redirect('/compose)
+                return redirect('/compose')
             else:
                 if not os.path.isfile('./public/posts.json'):
                     with open('public/posts.json', 'w+') as file:
