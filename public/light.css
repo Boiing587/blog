@@ -103,3 +103,9 @@ main {
   bottom: 10px;
   left: 97%;
 }
+
+.disabled {
+  pointer-events: none;
+  cursor: not-allowed;
+  opacity: 0.65;
+}
