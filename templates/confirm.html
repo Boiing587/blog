@@ -19,6 +19,15 @@
         var x = parseInt(localStorage.getItem('postIndex'));
         console.log(x)
         document.getElementById('postName').innerHTML = `"${posts[x].title}"`
+        
+        function rmvDisable() {
+          var value = document.getElementById('name').value;
+          if (value == posts[x].title) {
+            element.classList.remove('disabled')
+          }
+        }
+
+        setInterval(rmvDisable(), 100)
       });
 
     </script>
