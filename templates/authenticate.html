@@ -14,7 +14,8 @@
     <script>
       function confirmPass() {
         apiPass = document.getElementById('pass').value;
-        location.href = `/compose?api_key=${apiPass}`
+        cookies.set('inputKey', apiPass)
+        location.href="/compose"
       }           
     </script>
   </body>
