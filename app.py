@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 import os
 import json
-from flask import flask, Flask, send_from_directory, render_template, request, jsonify, redirect
+from flask import Flask, send_from_directory, render_template, request, jsonify, redirect
 from dotenv import load_dotenv
 load_dotenv(os.path.join(os.path.dirname(__file__), '.env'))
 
