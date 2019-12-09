@@ -23,7 +23,8 @@
         function rmvDisable() {
           var name = document.getElementById('name').value;
           if (name == posts[x].title) {
-            name.classList.remove('disabled')
+            var button = document.getElementsByClassName('disabled')
+            button.classList.remove('disabled')
           }
         }
 
