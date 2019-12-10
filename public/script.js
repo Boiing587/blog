@@ -91,3 +91,13 @@ function codeSubmit() {
   console.log(key)
   cookie.set('inputKey', key)
 }
+
+function rmvDisable() {
+  var name = document.getElementById('name').value;
+  consolge.log(name)
+  if (name == posts[x].title) {
+    console.log('so far so good')
+    var button = document.getElementsByClassName('disabled')
+    button.classList.remove('disabled')
+  }
+}
