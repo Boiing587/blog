@@ -95,7 +95,8 @@ function codeSubmit() {
 function rmvDisable() {
   var name = document.getElementById('name').value;
   console.log(name)
-  if (name == posts[x].title) {
+  console.log(postTitle)
+  if (name == postTitle) {
     console.log('so far so good')
     var button = document.getElementsByClassName('disabled')
     button.classList.remove('disabled')
