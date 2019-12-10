@@ -96,6 +96,9 @@ function rmvDisable() {
   var name = document.getElementById('name').value;
   var postTitle = localStorage.getItem('postTitle')
   if (name == postTitle) {
-    document.getElementById('disabled').classList.remove('disabled')
+    document.getElementById('disabled').classList.remove('disabled');
+    document.getElementById('error').innerHTML = '';
+  } else {
+    document.getElementById('error').innerHTML = 'That wasn\'nt correct, try again.';
   }
 }
