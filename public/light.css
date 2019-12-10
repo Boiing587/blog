@@ -113,3 +113,7 @@ main {
 .confirm {
   margin-left: 5px;
 }
+
+#error {
+  font-size: 10px;
+}
