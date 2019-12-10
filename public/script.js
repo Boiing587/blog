@@ -100,5 +100,6 @@ function rmvDisable() {
     document.getElementById('error').innerHTML = '';
   } else {
     document.getElementById('error').innerHTML = 'That wasn\'t correct, try again.';
+    document.getElementById('name').value = '';
   }
 }
