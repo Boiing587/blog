@@ -20,7 +20,7 @@
         var x = parseInt(localStorage.getItem('postIndex'));
         console.log(x)
         document.getElementById('postName').innerHTML = `"${posts[x].title}"`
-        var postTitle = posts[x].title
+        localStorage.setItem('postTitle', posts[x].title)
       });
 
     </script>
