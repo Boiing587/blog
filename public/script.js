@@ -92,12 +92,14 @@ function codeSubmit() {
   cookie.set('inputKey', key)
 }
 
+localStorage.setItem('confirmed', 0)
 function rmvDisable() {
   var name = document.getElementById('name').value;
   var postTitle = localStorage.getItem('postTitle')
   if (name == postTitle) {
     document.getElementById('disabled').classList.remove('disabled');
     document.getElementById('error').innerHTML = '';
+    localStorage.setItem('confirmed', 1)
   } else {
     document.getElementById('disabled').classList.add('disabled');
     document.getElementById('error').innerHTML = 'That wasn\'t correct, try again.';

@@ -22,6 +22,13 @@
         console.log(x)
         document.getElementById('postName').innerHTML = `"${posts[x].title}"`
         localStorage.setItem('postTitle', posts[x].title)
+        
+        function deletePost() {
+          var confirmation = localStorage.getItem('confirmed')
+          if (confirmation == 1) {
+            delete posts[x]
+          }
+        }
       });
 
     </script>
