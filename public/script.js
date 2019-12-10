@@ -99,6 +99,7 @@ function rmvDisable() {
     document.getElementById('disabled').classList.remove('disabled');
     document.getElementById('error').innerHTML = '';
   } else {
+    document.getElementById('disabled').classList.add('disabled');
     document.getElementById('error').innerHTML = 'That wasn\'t correct, try again.';
     document.getElementById('name').value = '';
   }
