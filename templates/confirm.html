@@ -10,7 +10,8 @@
       <h3 id='postName'></h3>
       <input class='input' id='name' placeholder="Enter the post's name to delete it">
       <button class='disabled'>Yes</button>
-      <button>No</button>
+      <button>No</button><br />
+      <button onclick="rmvDisable()">Check</button>
     </main>
     <script>
       fetch('/posts.json')
@@ -27,8 +28,6 @@
             button.classList.remove('disabled')
           }
         }
-
-        setInterval(rmvDisable(), 100)
       });
 
     </script>
