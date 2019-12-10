@@ -80,6 +80,9 @@ def confirmDelete():
 def test():
     return send_from_directory('./public', 'test.html')
 
+@app.route('/tea')
+def tea():
+    return '', 418
 
 app.run(host='0.0.0.0', port=port)
 
