@@ -99,7 +99,6 @@ function rmvDisable() {
   console.log(postTitle)
   if (name == postTitle) {
     console.log('so far so good')
-    var button = document.getElementsByClassName('disabled')
-    button.classList.remove('disabled')
+    document.getElementById('disabled').classList.remove('disabled')
   }
 }
