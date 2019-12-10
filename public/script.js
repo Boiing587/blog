@@ -95,10 +95,7 @@ function codeSubmit() {
 function rmvDisable() {
   var name = document.getElementById('name').value;
   var postTitle = localStorage.getItem('postTitle')
-  console.log(name)
-  console.log(postTitle)
   if (name == postTitle) {
-    console.log('so far so good')
     document.getElementById('disabled').classList.remove('disabled')
   }
 }
