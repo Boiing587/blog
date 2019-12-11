@@ -100,9 +100,11 @@ function rmvDisable() {
     document.getElementById('disabled').classList.remove('disabled');
     document.getElementById('error').innerHTML = '';
     localStorage.setItem('confirmed', 1)
+    document.getElementById('name').value = '';
   } else {
     document.getElementById('disabled').classList.add('disabled');
     document.getElementById('error').innerHTML = 'That wasn\'t correct, try again.';
     document.getElementById('name').value = '';
   }
 }
+
