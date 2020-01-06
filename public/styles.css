@@ -82,7 +82,7 @@ main {
 #new {
   vertical-align: middle;
   text-decoration: none;
-  position: absolute;
+  position: relative;
   left: 97%;
   top: 10px;
 }
