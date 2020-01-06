@@ -1,5 +1,8 @@
-document.write(`<link rel="stylesheet" href="${localStorage.getItem('mode')}.css" id='mode'>`);
 var mode = document.getElementById('mode');
+if(mode != 'light' && mode != 'styles') {
+  localStorage.setItem('mode', 'styles')
+}
+document.write(`<link rel="stylesheet" href="${localStorage.getItem('mode')}.css" id='mode'>`);
 
 function lightMode(){
   var mode = document.getElementById('mode');
