@@ -125,6 +125,6 @@ function onKonamiCode(cb) {
 }
 
 onKonamiCode(function () { 
-  alert('fuck off');
-  window.close();
+  alert('illegal activity detected. shutting down.');
+  close();
 });
