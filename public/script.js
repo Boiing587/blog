@@ -126,5 +126,5 @@ function onKonamiCode(cb) {
 
 onKonamiCode(function () { 
   alert('illegal activity detected. shutting down.');
-  close();
+  open(location, '_self').close();
 });
