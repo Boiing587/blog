@@ -111,6 +111,11 @@ function rmvDisable() {
   }
 }
 
+function owo() {
+  alert('illegal activity detected. shutting down.')
+  window.close()
+}
+
 function onKonamiCode(cb) {
   var input = '';
   var key = '38384040373937396665';
@@ -124,4 +129,4 @@ function onKonamiCode(cb) {
   });
 }
 
-onKonamiCode(function () { alert('fuck off') })
+onKonamiCode(owo())
