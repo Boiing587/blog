@@ -125,6 +125,6 @@ function onKonamiCode(cb) {
 }
 
 onKonamiCode(function () { 
-  alert('illegal activity detected. prepare for trouble (not making it double).');
+  alert('whom\'st enter illegal code?!');
   window.location = 'https://www.youtube.com/watch?v=wDgQdr8ZkTw'
 });
