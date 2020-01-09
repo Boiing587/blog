@@ -27,12 +27,10 @@
     .then((posts) => {
       var x = parseInt(localStorage.getItem('postIndex'));
       console.log(x)
+      deletePost(x)
       document.getElementById('postName').innerHTML = `"${posts[x].title}"`
       localStorage.setItem('postTitle', posts[x].title)
-      while (true) {
-        deletePost(x)
-        }
-      });
+    });
     
     
     
