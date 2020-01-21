@@ -122,5 +122,5 @@ function onKonamiCode(cb) {
 
 onKonamiCode(function () { 
   alert('whom\'st enter illegal code?!');
-  window.location = 'https://www.youtube.com/watch?v=wDgQdr8ZkTw'
+  window.location = '/test'
 });

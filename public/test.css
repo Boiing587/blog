@@ -1,0 +1,32 @@
+#border {
+  border:1px solid black;
+  height:20px;
+  width: 100px;
+}
+
+#fill {
+  background-color: black;
+  color: black;
+  height: inherit;
+  width: 0px;
+}
+
+#percent {
+  margin: 0;
+  margin-left: 5px;
+}
+
+.bruh {
+  display: flex;
+}
+
+*:not(#fill) {
+  margin: 2px;
+}
+
+#aids {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  
+}

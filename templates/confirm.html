@@ -15,11 +15,19 @@
     <p id='error'></p>
   </main>
   <script>
-    function deletePost(postIndex) {
-      var confirmation = localStorage.getItem('confirmed')
-      if (confirmation == 1) {
-        delete posts[postIndex]
-      }
+    function deletePost() {
+      fetch('/posts.json')
+      .then(res => res.json())
+      .then((posts) => {
+        var x = parseInt(localStorage.getItem('postIndex'));
+        var confirmation = localStorage.getItem('confirmed')
+        if (confirmation == 1) {
+          cookies.set('delete', x)
+          var postTitle = localStorage.getItem('postTitle')
+          cookies.set('title', postTitle)
+          location.href = '/success'
+        }
+      })
     }
     
     fetch('/posts.json')
@@ -27,7 +35,6 @@
     .then((posts) => {
       var x = parseInt(localStorage.getItem('postIndex'));
       console.log(x)
-      deletePost(x)
       document.getElementById('postName').innerHTML = `"${posts[x].title}"`
       localStorage.setItem('postTitle', posts[x].title)
     });

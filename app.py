@@ -76,6 +76,27 @@ def confirmDelete():
     else:
         return redirect('delete')
 
+@app.route('/success')
+def success():
+  x = request.cookies.get('title')
+  y = request.cookies.get('delKey')
+  z = request.cookies.get('delete')
+  if y == delKey:
+    with open('public/posts.json') as data_file:
+      obj = json.load(data_file)
+
+    for i in range(len(obj)):
+      if obj[i]["title"] == x:
+        del obj[i]
+        break
+    
+    with open("public/posts.json", "w")as data_file:
+      obj = json.dump(obj, data_file)
+    
+    return redirect('blog.html')
+  else:
+    return redirect('blog.html')
+
 @app.route('/test')
 def test():
     return send_from_directory('./public', 'test.html')
